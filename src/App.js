@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Carrinho from "./pages/Carrinho";
 import Favoritos from "./pages/Favoritos";
 import Contato from "./pages/Contato";
-import Login from "./pages/Login";
+import Login from "./pages/login";
 
 function App() {
   return (
