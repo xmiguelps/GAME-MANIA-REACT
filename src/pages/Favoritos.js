@@ -1,6 +1,10 @@
+import Header from "../components/Header"
+import Footer from "../components/Footer"
+
 function Favoritos() {
     return (
         <main>
+            <Header />
             <div className="d-flex flex-column">
                 <h2 className="title-galerias">
                     <img src="assets/imgs/icons/heart.png" alt="icone de novidades"/><p className="p-0 m-0 m-2 d-inline">Favorites</p><img src="assets/imgs/icons/seta-direita.png" alt="seta para direita"/>
@@ -16,6 +20,7 @@ function Favoritos() {
                     </section>
                 </div>
             </div>
+            <Footer />
         </main>        
     )
 }

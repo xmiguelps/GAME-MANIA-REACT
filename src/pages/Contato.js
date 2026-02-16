@@ -1,11 +1,15 @@
+import { Link } from "react-router-dom"
+
 function Contato() {
     return (
     <main className="w-100 h-100 d-flex justify-content-center align-items-center">
         <section className="box-nos-contate d-flex flex-column align-items-center">
             <div className="d-flex justify-content-start w-100">
-                <a href="index.html" target="_self" rel="nofollow" className="back-button m-2 mb-0 text-decoration-none">
-                    <img src="assets/imgs/icons/seta-esquerda.png" alt=""/><p className="text-white d-inline m-1">Voltar</p>
-                </a>
+                <Link to="/">
+                    <div className="back-button m-2 mb-0 text-decoration-none">
+                        <img src="assets/imgs/icons/seta-esquerda.png" alt=""/><p className="text-white d-inline m-1">Voltar</p>
+                    </div>
+                </Link>
             </div>
             <figure className="mt-1"><img src="assets/imgs/icons/logo-loja.png" alt=""/></figure>
             <article>

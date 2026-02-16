@@ -1,6 +1,10 @@
+import Header from "../components/Header"
+import Footer from "../components/Footer"
+
 function Carrinho() {
     return (
     <main>
+        <Header />
         <div className="d-flex flex-column">
             <h2 className="title-galerias">
                 <img src="assets/imgs/icons/carrinho.png" alt="icone de novidades"/><p className="p-0 m-0 m-2 d-inline">Carrinho</p><img src="assets/imgs/icons/seta-direita.png" alt="seta para direita"/>
@@ -34,6 +38,7 @@ function Carrinho() {
                 </article>
             </div>
         </div>
+        <Footer />
     </main>
     )
 }

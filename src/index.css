@@ -333,6 +333,22 @@ footer {
     font-size: small;
 }
 
+.rede-social {
+    margin-left: 5px;
+}
+
+.twitter:hover {
+    content: url(../public/assets/imgs/icons/twitter-logo-hover.png);
+}
+
+.instagram:hover {
+    content: url(../public/assets/imgs/icons/instagram-logo-hover.png);
+}
+
+.facebook:hover {
+    content: url(../public/assets/imgs/icons/facebook-logo-hover.png);
+}
+
 .body-login {
     width: 100vw;
     height: 100vh;
@@ -523,6 +539,11 @@ footer {
     height: 30px;
     border-radius: 10px;
     border: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .c-white {
