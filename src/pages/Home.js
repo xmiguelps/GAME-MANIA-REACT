@@ -6,6 +6,7 @@ import { useEffect } from "react";
 
 function Home() {
 
+
     useEffect(() => {
         const searchButton = document.querySelector('.search-button');
         const searchinput = document.querySelector('.search');
@@ -32,6 +33,7 @@ function Home() {
                 };
             });
         }
+
     }, []);
 
     return (

@@ -10,15 +10,15 @@ import Home from "./pages/Home";
 function App() {
   return (
     <>
-    <Router>
-        <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/login" element={<Login />}></Route>
-            <Route path="/carrinho" element={<Carrinho />}></Route>
-            <Route path="/favoritos" element={<Favoritos />}></Route>
-            <Route path="/contato" element={<Contato />}></Route>    
-        </Routes>
-    </Router>
+      <Router>
+          <Routes>
+              <Route path="/" element={<Home />}></Route>
+              <Route path="/login" element={<Login />}></Route>
+              <Route path="/carrinho" element={<Carrinho />}></Route>
+              <Route path="/favoritos" element={<Favoritos />}></Route>
+              <Route path="/contato" element={<Contato />}></Route>    
+          </Routes>
+      </Router>
     </>
   )
 }
