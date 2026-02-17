@@ -1,6 +1,21 @@
 import { Link } from "react-router-dom"
+import { useEffect } from "react";
 
 function Login() {
+
+    useEffect(() => {
+        const inputLogin = document.querySelectorAll('.input-login')
+        inputLogin.forEach(input => {
+            input.addEventListener('keyup', (event) => {
+                if (event.target.value.length < 3) {
+                    event.target.style.outlineColor = '#ff6b6b'
+                } else {
+                    event.target.style.outlineColor = '#28a745'
+                }
+            })
+        });
+    }, []);
+
     return (
         <div className="body-login p-0 m-0">
             <main className="d-flex justify-content-center align-items-center w-100 h-100">

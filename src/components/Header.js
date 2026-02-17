@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 function Header() {
+
     return (
     <header className="d-flex align-items-center justify-content-between">
             <div className="m-3">
@@ -34,7 +35,7 @@ function Header() {
                                     </li>
                                     <li className="box-carrinho ps-1 nav-item">
                                         <Link to="/carrinho">
-                                            <a className="carrinho nav-link">
+                                            <div className="carrinho nav-link">
                                                     <div className="box-icon-img-carrinho d-flex">
                                                         <div className="box-icon-carrinho">
                                                             <img className="icon-carrinho" src="assets/imgs/icons/carrinho.png" alt="carrinho"/>
@@ -44,7 +45,7 @@ function Header() {
                                                         <p className="p-0 m-0 text-carrinho"><span className="numero-produtos">0</span> produtos</p>
                                                     </div>
                                                 </div>
-                                            </a>
+                                            </div>
                                         </Link>
                                     </li>
                                 </ul>

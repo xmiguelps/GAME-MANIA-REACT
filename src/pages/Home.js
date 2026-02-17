@@ -2,10 +2,42 @@ import Item from "../components/Item";
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 
+import { useEffect } from "react";
+
 function Home() {
+
+    useEffect(() => {
+        const searchButton = document.querySelector('.search-button');
+        const searchinput = document.querySelector('.search');
+        const galerias = document.querySelectorAll('.box-galeria');
+
+        if (searchButton) {
+            searchButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                if (searchinput &&  galerias) {
+                    const searchTerm = searchinput.value.toLowerCase();
+                    galerias.forEach(galeria => {
+                        const products = galeria.querySelectorAll('.box-products');
+                        products.forEach(product => {
+                            const productName = product.querySelector('.title-products').   textContent.toLocaleLowerCase();
+                            if (productName.includes(searchTerm)) {
+                                product.style.visibility = 'visible';
+                                product.style.position = 'static';
+                            } else {
+                                product.style.visibility = 'hidden';
+                                product.style.position = 'absolute';
+                            }
+                        });
+                    }); 
+                };
+            });
+        }
+    }, []);
+
     return (
+        <>
+        <Header />
         <main>
-            <Header />
         <section>
             <div>
                 <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
@@ -92,6 +124,7 @@ function Home() {
         </section>
         <Footer />
     </main>
+    </>
     )       
 }
 

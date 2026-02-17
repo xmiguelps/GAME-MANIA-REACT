@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 
@@ -12,7 +14,9 @@ function Carrinho() {
             <div className="d-flex justify-content-center box-cart-price">
                 <article id="empty-cart-message" className="box-empyt-cart d-none d-flex flex-column flex-wrap justify-content-center align-items-center p-2 mt-4 mb-4 mr-3 ms-0">
                 <h3>Seu carrinho está vazio</h3>
-                <a href="index.html" className="btn btn-primary mt-3">Ver produtos</a>
+                <Link to="/">
+                    <div className="btn btn-primary mt-3">Ver produtos</div>
+                </Link>
             </article>
                 <section id="cart-itens" className="box-galeria-cart container-fluid justify-content-start d-none d-flex flex-wrap flex-column align-items-center">
                 </section>
@@ -33,7 +37,9 @@ function Carrinho() {
                     </div>
                     <div className="d-flex flex-column">
                         <button className="btn btn-primary mb-2" id="checkout-button">Finalizar Compra</button>
-                        <a href="index.html" rel="nofollow" target="_self" className="btn btn-secondary">Continuar Comprando</a>
+                        <Link to="/">
+                            <div  rel="nofollow" target="_self" className="btn btn-secondary w-100">Continuar Comprando</div>
+                        </Link>
                     </div>
                 </article>
             </div>
