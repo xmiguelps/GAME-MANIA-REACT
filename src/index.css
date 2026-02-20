@@ -26,6 +26,10 @@ menu > nav {
     flex: 0 1 80%;
 }
 
+.remove-item {
+    cursor: pointer;
+}
+
 .login-button {
     width: 100px;
     border-radius: 5px;

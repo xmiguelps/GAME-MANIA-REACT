@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Header() {
+function Header({ count }) {
 
     return (
     <header className="d-flex align-items-center justify-content-between">
@@ -42,7 +42,7 @@ function Header() {
                                                         </div>
                                                     <div className="box-text-carrinho d-flex flex-column justify-content-center">
                                                         <p className="p-0 m-0 text-carrinho">carrinho</p>
-                                                        <p className="p-0 m-0 text-carrinho"><span className="numero-produtos">0</span> produtos</p>
+                                                        <p className="p-0 m-0 text-carrinho"><span className="numero-produtos">{count}</span> produtos</p>
                                                     </div>
                                                 </div>
                                             </div>
