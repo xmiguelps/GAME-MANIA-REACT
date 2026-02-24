@@ -554,16 +554,24 @@ a {
     color: white;
 }
 
+.btn-plus,.btn-minus {
+    background: none;
+    border: none;
+    margin: 0px 10px 0px 10px;
+}
+
 .btn-minus:hover {
-    color: white;
+    color: #919191;
 }
 
 .btn-plus:hover {
-    color: white;
+    color: #919191;
 }
 
 #toast-message {
-    display: none;
+    /* start hidden; opacity controls visibility */
+    opacity: 0;
+    visibility: hidden;
     position: fixed;
     bottom: 20px;
     left: 50%;
@@ -575,6 +583,12 @@ a {
     font-size: 16px;
     z-index: 1050;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#toast-message.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 @media screen and (max-width: 991px) {

@@ -4,7 +4,7 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import ItemCart from '../components/ItemCart'
 
-function Carrinho({count, cartItems}) {
+function Carrinho({count, cartItems, setCartItems, setCount}) {
 
     let total = 0
 
@@ -21,7 +21,7 @@ function Carrinho({count, cartItems}) {
             </h2>
             <div className="d-flex justify-content-center box-cart-price"> 
                 { cartItems.length === 0 &&
-                    <article id="empty-cart-message" className="box-empyt-cart d-flex flex-column flex-wrap justify-content-center align-items-center p-2 mt-4 mb-4 mr-3 ms-0">
+                    <article id="empty-cart-message" className="box-empyt-cart d-flex flex-column flex-wrap justify-content-center align-items-center p-5 mt-4 mb-4 mr-3 ms-0">
                         <h3>Seu carrinho está vazio</h3>
                         <Link to="/">
                             <div className="btn btn-primary mt-3">Ver produtos</div>
@@ -32,14 +32,14 @@ function Carrinho({count, cartItems}) {
                     <>
                     <section id="cart-itens" className="box-galeria-cart container-fluid justify-content-start d-flex flex-wrap flex-column align-items-center">
                         {cartItems.map((item, index) => (
-                            <ItemCart key={item.id} index={index} name={item.name} price={item.price} src={item.src} qty={item.qty} cartItems={cartItems}/>
+                            <ItemCart key={item.id} index={index} name={item.name} price={item.price} src={item.src} qty={item.qty} cartItems={cartItems} setCartItems={setCartItems} setCount={setCount} count={count}/>
                         ))}
                     </section>
                     <article className="box-total-price p-3 ms-3">
                         <h3 className="h5 mb-5">Resumo do Pedido</h3>
                             <div className="d-flex justify-content-between">
                                 <p>Subtotal</p>
-                                <p id="subtotal-value">R$ {total}</p>
+                                <p id="subtotal-value">R$ {total.toFixed(2)}</p>
                             </div>
                             <div className="d-flex justify-content-between">
                                 <p className="mb-0">Frete</p>
@@ -48,7 +48,7 @@ function Carrinho({count, cartItems}) {
                             <hr/>
                             <div className="d-flex justify-content-between">
                                 <p><strong>Total</strong></p>
-                                <p id="total-value"><strong>R$ {total}</strong></p>
+                                <p id="total-value"><strong>R$ {total.toFixed(2)}</strong></p>
                             </div>
                             <div className="d-flex flex-column">
                                 <button className="btn btn-primary mb-2" id="checkout-button">Finalizar Compra</button>

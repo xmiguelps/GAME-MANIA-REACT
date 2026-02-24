@@ -41,7 +41,7 @@ function Header({ count }) {
                                                             <img className="icon-carrinho" src="assets/imgs/icons/carrinho.png" alt="carrinho"/>
                                                         </div>
                                                     <div className="box-text-carrinho d-flex flex-column justify-content-center">
-                                                        <p className="p-0 m-0 text-carrinho">carrinho</p>
+                                                        <p className="p-0 m-0 text-carrinho">Carrinho</p>
                                                         <p className="p-0 m-0 text-carrinho"><span className="numero-produtos">{count}</span> produtos</p>
                                                     </div>
                                                 </div>

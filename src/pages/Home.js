@@ -4,8 +4,53 @@ import Footer from "../components/Footer"
 import produtos from "../contexts.js/produtos";
 
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
+import { useState } from "react";
 
-function Home({count, setCount, cartItems, setCartItems}) {
+function Notif_msg_cart({ visible }) {
+    return createPortal(
+        <div id="toast-message" className={visible ? 'show' : ''}>
+            Produto adicionado ao carrinho!
+        </div>,
+        document.body
+    )
+}
+
+function Notif_msg_fav({ visible }) {
+    return createPortal(
+        <div id="toast-message" className={visible ? 'show' : ''}>
+            Produto adicionado aos favoritos!
+        </div>,
+        document.body
+    )
+}
+
+function Notif_msg_fav2({ visible }) {
+    return createPortal(
+        <div id="toast-message" className={visible ? 'show' : ''}>
+            Produto já esta nos favoritos!
+        </div>,
+        document.body
+    )
+}
+
+function Home({count, setCount, cartItems, setCartItems, favoriteItems, setFavoriteItems, NotifCart, showNotif_cart}) {
+
+    const [NotifFav, setNotifFav] = useState(false)
+    function showNotif_fav() {
+        setNotifFav(true)
+        setTimeout(() => {
+            setNotifFav(false)
+        }, 3000);
+    }
+
+    const [NotifFav2, setNotifFav2] = useState(false)
+    function showNotif_fav2() {
+        setNotifFav2(true)
+        setTimeout(() => {
+            setNotifFav2(false)
+        }, 3000);
+    }
 
     useEffect(() => {
 
@@ -40,6 +85,10 @@ function Home({count, setCount, cartItems, setCartItems}) {
     return (
         <>
         <Header count={count}/>
+        <Notif_msg_cart visible={NotifCart} />
+        <Notif_msg_fav visible={NotifFav} />
+        <Notif_msg_fav2 visible={NotifFav2} />
+
         <main>
         <section>
             <div>
@@ -86,6 +135,11 @@ function Home({count, setCount, cartItems, setCartItems}) {
                         cartItems={cartItems}
                         setCartItems={setCartItems}
                         id={produto.id}
+                        notif_cart={showNotif_cart}
+                        favoriteItems={favoriteItems}
+                        setFavoriteItems={setFavoriteItems}
+                        notif_fav={showNotif_fav}
+                        notif_fav2={showNotif_fav2}
                         />
                     ))}
                 </article>
@@ -120,6 +174,11 @@ function Home({count, setCount, cartItems, setCartItems}) {
                             cartItems={cartItems}
                             setCartItems={setCartItems}
                             id={produto.id}
+                            notif_cart={showNotif_cart}
+                            favoriteItems={favoriteItems}
+                            setFavoriteItems={setFavoriteItems}
+                            notif_fav={showNotif_fav}
+                            notif_fav2={showNotif_fav2}
                             />
                         ))}
                     </article>

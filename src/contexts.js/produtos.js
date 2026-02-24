@@ -7,7 +7,7 @@
             {id: 5, name: "Notebook Acer", price: "3299.00", src:"assets/imgs/produtos/notebook-acer.jpg"},
             {id: 6, name: "Mouse Gamer", price: "157.00", src:"assets/imgs/produtos/mouse-gamer.jpg"},
             {id: 7, name: "Processador AMD", price: "580.00", src:"assets/imgs/produtos/processador-AMD.jpg"},
-            {id: 8, name: "Memoria ram 16GB", price: "24.00", src:"assets/imgs/produtos/memoria-ram-16gb.jpg"},
+            {id: 8, name: "Memoria ram 16GB", price: "240.00", src:"assets/imgs/produtos/memoria-ram-16gb.jpg"},
             {id: 9, name: "Teclado Gamer RGB", price: "468.99", src:"assets/imgs/produtos/teclado-gamer-RGB.jpg"},
             {id: 10, name: "Water Coller", price: "459.00", src:"assets/imgs/produtos/water-coller.jpg"},
             {id: 11, name: "Mesa Gamer RGB", price: "541.99", src:"assets/imgs/produtos/mesa-gamer-RGB.jpg"},
@@ -20,11 +20,11 @@
             {id: 18, name: "Iphone 15", price: "3470.99", src:"assets/imgs/produtos/iphone-15.webp"},
         ],
         produtos_destaques: [
-            {id: 19, name: "Notebook Gamer", price: "7599", src: "assets/imgs/destaques/notebook-gamer.png"},
+            {id: 19, name: "Notebook Gamer", price: "7599.00", src: "assets/imgs/destaques/notebook-gamer.png"},
             {id: 20, name: "Monitor Gamer", price: "966.99", src: "assets/imgs/destaques/monitor-gamer.png"},
-            {id: 21, name: "RTX 5070", price: "5400", src: "assets/imgs/destaques/rtx5070.png"},
+            {id: 21, name: "RTX 5070", price: "5400.00", src: "assets/imgs/destaques/rtx5070.png"},
             {id: 22, name: "Gabinet Gamer", price: "759.99", src: "assets/imgs/destaques/gabinet-gamer.png"},
-            {id: 23, name: "Galaxy S24", price: "5000", src: "assets/imgs/destaques/galaxy-s24.png"},
+            {id: 23, name: "Galaxy S24", price: "5000.89", src: "assets/imgs/destaques/galaxy-s24.png"},
         ]
     }
 export default produtos;
